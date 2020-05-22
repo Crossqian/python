@@ -1,0 +1,23 @@
+print("Hello world!")
+
+
+print(1 + 3)
+
+
+a = 1 + 3
+print(a)
+
+
+b = "world!"
+print("Hello", end=" "+b+"\n")
+
+
+c = int(input("How much money do you have?"))
+#改变格式是int()，并非(int)
+if c > 500:
+    print("rich")
+elif c > 250:
+    print("not bad")
+else:
+    print("poor")
+#注意缩进
