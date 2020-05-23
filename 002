@@ -1,0 +1,80 @@
+#循环
+# count = 0
+# while count <= 10:
+#     print(count)
+#     count += 1
+
+
+# while True:
+#     s = input("start")
+#
+#     if s == "q":
+#         break
+#
+#     if "1" in s:
+#         print("illeagl")
+#         continue #停止本次循环，继续执行下一次循环
+#
+#     print(s)
+
+
+#求1-100的和
+# count = 1
+# sum = 0
+# while count <= 100:
+#     sum += count
+#     count += 1
+# print(sum)
+
+
+#输出1-100的所有奇数
+# n = 1
+# while n < 100:
+#     if n % 2 == 1:s
+#         print(n)
+#     n = n+1
+
+
+#while  slse
+count = 1
+while count <= 10:
+    print(count)
+    count += 1
+    if count == 5:
+        print("break")
+        break   #不执行下面的else
+else:
+    print("wuhu~")
+    
+    
+#格式化输出
+# name = input("name")
+# age = input("age")
+#
+# #print(name + "今年" + age + "岁")
+# print("%s今年%s岁" % (name, age))    #%s表示字符串占位符
+
+
+# a = 108
+# s = "梁山有%d将" % (a)    #%d可以换为%s，但是%s无法换成%d
+# print(s)
+
+
+name = "海洋"
+print("%s占据了地球%%71的面积" % (name))
+#如果字符串中已经有了占位符，那么后面的%均为占位，需要转义；如果没有占位符，不需要转义
+
+
+#运算符
+# print(2**3)
+
+
+# 逻辑运算优先级
+# 括号 > not > and > or
+
+
+# x or y,如果x==0，那么y，否则x（0和非0为非0）
+# x and y，如果x！=0，那么y，否则x(有0为0)
+# print(2 > 3 and 3)  #F
+# print(3 and 2 > 3)  #F
+# print(2 < 1 and 4 > 6 or 3 and 4 > 5 or 6)  #F or F or 6
