@@ -1,0 +1,34 @@
+# # 将变量根据第一个l切割
+# name = "aleX leNb"
+# list = name.split("l", 1)
+# print(list)
+
+
+# # l出现几次
+# name = "alecNb"
+# list = name.count("l")
+# print(list)
+
+
+# # 前四位l出现几次
+# name = "alll leNb"
+# list = name[:3]
+# print(list.count("l"))
+
+# name = "aleX leNb"
+# print(name[-1:-7:-1])
+
+# s = "0123456789"
+# s2 = s[-1:-3:-1]
+# print(s2)
+
+
+# name = "aleX leNb"
+# count = 0
+# while count<len(name):
+#     s = name[count]
+#     if s == "e":
+#         print(count)
+#     count +=1
+
+
