@@ -1,0 +1,137 @@
+#作业
+dic = {'k1': 'v1', 'k2': 'v2', 'k3': [11, 22, 33]}
+# for key in dic.keys():
+#     print(key)
+# for value in dic.values():
+#     print(value)
+# for k, v in dic.items():
+#     print(k, v)
+# dic['k4'] = 'v4'
+# print(dic)
+# dic['k1'] = 'alex'
+# print(dic)
+# dic['k3'].append(44)
+# print(dic)
+# dic['k3'].insert(0, 18)
+# print(dic)
+
+
+# web = {
+#     'USA': {
+#         'Google': ['free', 'search'],
+#         'Twitter': ['free', 'social']
+#     },
+#     'CN': {
+#         'Baidu': ['free', 'search'],
+#         'Weibo': ['free', 'social']
+#     }
+# }
+# # web['USA']['Google'].append('bigget')
+# # web['USA']['Google'].remove('free')
+# web['USA']['Google'].insert(0, 'bigget')
+# print(web['USA'])
+
+
+# str = 'k:1|k1:2|k2:3|k3:4'
+# list = str.split('|')
+# dic = {}
+# for el in list:
+#     l2 = el.split(':')    #k, v = el.split(':')
+#     dic[l2[0]] = l2[1]    #dic[k] = v
+# print(dic)
+
+
+# li = [11, 22, 33, 44, 55, 66, 77, 88, 99, 90]
+# dic = {'k1': [], 'k2': []}
+# for el in li:
+#     if el > 66:
+#         dic['k1'].append(el)
+#     if el < 66:
+#         dic['k2'].append(el)
+# print(dic)
+
+
+# goods = [
+#     {'name': '电脑', 'price': 1999},
+#     {'name': '鼠标', 'price': 19}
+# ]
+# for i in range(len(goods)):
+#     good = goods[i]
+#     print(i+1, good['name'], str(good['price']))
+#
+# while 1:
+#     s = input('请输入').lower()
+#     if s == 'q':
+#         break
+#     elif int(s) <= 0 or int(s) > len(goods):
+#         print("重")
+#     else:
+#         good = goods[int(s)-1]
+#         print(good['name'], str(good['price']))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# is和==
+# s = 'M'
+# print(id(s))
+# s1 = 'M'
+# print(id(s1))
+
+
+# lst = [1, 2, 4]
+# print(id(lst))
+# lst1 = [1, 2, 4]
+# print(id(lst1))
+
+
+# tup = (1, 2)
+# tup1 = (1, 2)
+# print(id(tup))
+# print(id(tup1))
+
+
+# print(id("哈哈呵呵呵呵呵呵呵呵呵呵呵呵呵"*100))
+# print(id("哈哈呵呵呵呵呵呵呵呵呵呵呵呵呵"*100))
+
+
+# s1 = "00000000000000000000000000000000000000000哈哈呵呵呵呵呵呵呵呵呵呵呵呵呵"
+# s2 = "00000000000000000000000000000000000000000哈哈呵呵呵呵呵呵呵呵呵呵呵呵呵"
+# print(id(s1))
+# print(id(s2))
+# print(s1 is s2)
+
+
+# a1 = str("alexalexalex"+"abcdef1111abcdefgabcdef1111abcdefgabcdef1111abcdefgabcd")
+# print(id(a1))
+# a2 = str("alexalexalex"+"abcdef1111abcdefgabcdef1111abcdefgabcdef1111abcdefgabc")
+# print(id(a2))
+#
+#
+# s1 = "@1 2 "
+# s2 = "@1 2 "
+# print(id(s1))
+# print(id(s2))
+
+
+s1 = "哈哈"
+s2 = "哈哈"
+print(s1 == s2) # True
+print(s1 is s2) # True 原因是有⼩数据池的存在 导致两个变量指向的是同⼀个对象
+l1 = [1, 2, 3]
+l2 = [1, 2, 3]
+print(l1 == l2) # True, 值是⼀样的
+print(l1 is l2) # False, 值是假的
