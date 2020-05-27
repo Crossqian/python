@@ -1,0 +1,204 @@
+#作业
+# list = ["000"]
+# list[0].replace("0", "1")
+# print(list)
+# list[0] = list[0].replace("0", "1")
+# print(list)
+
+
+# list = "abc"
+# list.upper()
+# print(list)
+# print(list.upper())
+
+
+# li = ["1", "2", "3", "445", "5"]
+# print(len(li))
+# li.append("6")
+# print(li)
+# li.insert(1, "Tony")
+# print(li)
+# li[2] = "K"
+# print(li)
+# l2 = ["q", "w", "e", "t", "y"]
+# li.extend(l2)
+# print(li)
+# li.extend("asdfg")
+# print(li)
+# li.reverse()
+# print(li)
+# li.remove("1")
+# print(li)
+# s = li.pop(2)
+# print(s, li)
+# li.pop[4:6]
+# print(s, li)
+# a = li.count("5")
+# print(a)
+
+
+# li = [1, 3, 2, "a", 4, "b", 5, "c"]
+# l1 = li[0:3]
+# print(l1)
+# l3 = li[::2]
+# print(l3)
+# l6 = li[-3:-8:-1]
+# print(l6)
+
+
+# list = [0, 1, 2, 3]
+# print(list[-3:-1])
+# print(list[-1:-3:-1])
+
+
+# list = []
+# for i in range(100, 9, -1):
+#     if i % 2 == 0:
+#         list.append(i)
+# print(list)
+#
+# for el in list:
+#     if el % 4 !=0:
+#         list.remove(el)
+# print(list)
+
+
+# lst = ["0", "1", "2", "3"]
+# el = lst.remove("2")
+# print(lst)
+# print(el)
+
+
+# #敏感词
+# li = ["qwe", "asdf"]
+# list = []
+# count = 0
+# while count < 3:
+#     el = input("请输入")
+#     if el in li:
+#         n = len(el)
+#         el = "*" * n
+#     list.append(el)
+#     count += 1
+# print(list)
+
+# #敏感词
+# li = ["qwe", "asdf"]
+# m = input("请输入")
+# for el in li:
+#     if el in m:
+#         m = m.replace(el, "*" * len(el))
+# print(m)
+
+
+# li = [1, 3, 4, "M", [3, 7, 8, "P"], 5, "Q"]
+# for el in li:
+#     if type(el) == list:
+#         for n in el:
+#             print(n)
+#     else:
+#         print(el)
+
+
+# n = int(input("请输入"))
+# list = []
+# for i in range(1, n+1):
+#     if i %7 == 0:
+#         i = "跳"
+#     list.append(str(i))
+# print(list)
+
+
+
+
+
+
+
+
+
+
+# code
+# dic = {"lol": "yxlm"}
+# print(dic)
+
+
+# dic = {1: "mht", False: "al", (1, "hh"): "元组"}
+# print(dic)
+
+
+# dic = {"lol": "yxlm"}
+# dic["mh"] = 'mhxy'
+# dic["mh"] = 'mhxy2'
+# dic.setdefault("pp","ppkdc")
+# dic.setdefault("pp","ppkdc2")
+# print(dic)
+
+# dic = {1: "mht", "lol": "yxlm", False: "al"}
+# ret = dic.pop(1)
+# del dic["lol"]
+# ret2 = dic.popitem()
+# print(dic)
+# print(ret)
+# print(ret2)
+
+
+# dic = {"mh": "mhxy"}
+# dic1 = {"mh": "mhxy2", "lol": "yxlm"}
+# dic.update(dic1)
+# print(dic)
+# print(dic1)
+
+# dic = {"及时雨": "宋江", "小李广": "花荣", "黑旋风": "李逵", "易大师": "JS"}
+# dic['大宝剑'] = '盖伦'   #增
+# dic['及时雨'] = '天老爷'  #改
+# print(dic)
+# print(dic["易大师"])   #查
+# print(dic.get("易大师"))
+# #print(dic["易大师1"]) #不存在报错
+# print(dic.get("易大师1"))  #不存在返回None
+# print(dic.get("易大师1", "2"))  #给默认值返回默认值
+# print(dic.get("易大师", "2"))  #存在则不返回默认值
+
+
+# dic = {"及时雨": "宋江", "易大师": "JS", "VN": "暗影猎手"}
+# print(dic.keys())
+# for key in dic.keys():
+#     print(key)
+# print(dic.values())
+# for value in dic.values():
+#     print(value)
+
+
+# dic = {"及时雨": "宋江", "易大师": "JS", "VN": "暗影猎手"}
+# print(dic.items())
+# for item in dic.items():
+#     print(item)
+
+
+# a, b, c = [1, 2, 3]
+# print(b)
+
+
+# dic = {"及时雨": "宋江", "易大师": "JS", "VN": "暗影猎手"}
+# for item in dic.items(): #for k, v in dic.items():
+#     k, v = item
+#     print(k)
+
+
+# dic = {
+#     "name": "A",
+#     "age": 1,
+#     "wife": {
+#         "name": "B",
+#         "age": 2,
+#     },
+#     "chilren":[
+#         {"name": "C", "age": 3},
+#         {"name": "D", "age": 4}
+#     ]
+# }
+# print(dic["chilren"][1]["age"])
+
+
+
+
