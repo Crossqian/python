@@ -1,0 +1,170 @@
+#作业
+#求平均值并且删除在平均分以下的人
+goals = {'a': 100, 'b': 90, 'c': 70}
+sum = 0
+for value in goals.values():
+    sum += value
+avg = sum / len(goals)
+print(avg)
+
+# 迭代时无法改变字典的大小
+# for k, v in goals.items():
+#     if v < avg:
+#         goals.pop(k)
+
+list = []
+for k, v in goals.items():
+    if v < avg:
+        list.append(k)
+
+for el in list:
+    goals.pop(el)
+print(goals)
+
+
+
+
+
+
+
+
+
+#code
+# s = '一'
+# s1 = s.join('1234')
+# print(s1)
+
+
+# s = '_'.join(['a', 'b', 'c'])
+# print(s)
+
+
+# s = '_'.join(['a', 'b', 'c'])
+# print(s)
+
+
+# list = ['a', 'b', 'c', 'd']
+# for el in list:
+#     list.remove(el)
+# print(list)
+
+
+# list = ['a', 'b', 'c', 'd']
+# del_list = []
+# for el in list:
+#     del_list.append(el)
+# for el in del_list:
+#     list.remove(el)
+# print(list)
+
+
+# list = ['周杰伦', '周润发', 'c', 'd']
+# del_list = []
+# for el in list:
+#     if el.startswith('周'):
+#         del_list.append(el)
+# for el in del_list:
+#     list.remove(el)
+# print(list)
+
+
+# dic = dict.fromkeys(["jay", "JJ"], ["周杰伦", "林俊杰"])
+# print(dic)
+
+
+# dic = dict.fromkeys(["jay", "JJ"], ["周杰伦", "林俊杰"])
+# print(dic)
+# dic.get("jay").append("1")
+# print(dic)
+
+
+# dic = {'a': 123}
+# s = dic.fromkeys('A', 'B')
+# print(s)
+
+
+# s = set()
+# dic = dict()
+# s = str()
+# i = int()
+# lst = list()
+
+
+# s = {123, 'a', 'a'}
+# print(s)
+
+
+# lst = ['a', 'a']
+# s = set(lst)
+# print(s)
+
+
+# s = {'a', 'b', 'c'}
+# s.add('d')
+# print(s)
+# s.add('d')
+# print(s)
+
+
+# s = {'a', 'b', 'c'}
+# s.update('def')
+# print(s)
+# s = {'a', 'b', 'c'}
+# s.update(['d', 'e', 'e'])
+# print(s)
+
+
+s1 = {'a', 'b', 'c'}
+s2 = {'b', 'c', 'd'}
+# print(s1 & s2)
+# print(s1.intersection(s2))
+
+# print(s1 | s2)
+# print(s1.union(s2))
+
+# print(s1 - s2)
+# print(s1.difference(s2))
+
+# print(s1 ^ s2)
+# print(s1.symmetric_difference(s2))
+
+
+# lst1 = ["a", "b", "c", "d"]
+# lst2 = lst1
+# print(lst1)
+# print(lst2)
+# lst1.append("e")
+# print(lst1)
+# print(lst2)
+
+
+# lst1 = ["a", "b", "c"]
+# # lst2 = lst1.copy()
+# lst2 = lst1[:]
+# lst1.append("d")
+# print(lst1)
+# print(lst2)
+# print(id(lst1), id(lst2))
+
+
+# lst1 = ['a', 'b', 'c', ['d', 'e']]
+# lst2 = lst1.copy()
+# lst1[3].append('f')
+# print(lst1)
+# print(lst2)
+# print(id(lst1[3]), id(lst2[3]))
+
+
+import copy
+lst1 = ['a', 'b', 'c', ['d', 'e']]
+lst2 = copy.deepcopy(lst1)
+lst1[3].append('f')
+print(lst1)
+print(lst2)
+print(id(lst1[3]), id(lst2[3]))
+
+
+
+
+
+
