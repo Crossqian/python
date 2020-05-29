@@ -1,0 +1,87 @@
+#作业
+# #36选7
+# from random import randint
+# s = set()
+# while len(s) < 7:
+#     s.add(randint(1, 36))
+# print(s)
+
+
+
+
+
+#code
+# f = open('字母', mode='r', encoding='utf-8')
+# s = f.read()
+# f.close()
+# print(s)
+
+
+# f = open('字母', mode='w', encoding='utf-8')
+# f.write('        E')
+# f.flush()
+# f.close()
+# f = open('字母', mode='r', encoding='utf-8')
+# s = f.read()
+# f.close()
+# print(s)
+
+
+# f = open('字母', mode='a', encoding='utf-8')
+# f.write('        E')
+# f.flush()
+# f.close()
+
+# f = open('字母', mode='rb')
+# s = f.read()
+# print(s)
+# print(s.decode('utf-8'))
+# f.close()
+
+
+# f = open('字母', mode='wb')
+# f.write('你好'.encode('utf-8'))
+# f.close()
+
+
+
+# f = open('字母', mode='r+', encoding='utf-8')
+# s = f.read()
+# f.write('你好')
+# f.flush()
+# f.close()
+# print(s)
+
+
+# f = open('字母', mode='r+', encoding='utf-8')
+# f.write('你好')
+# s = f.read()
+# f.flush()
+# f.close()
+# print(s)
+
+
+# f = open('字母', mode='w+', encoding='utf-8')
+# f.write('你好')
+# s = f.read()
+# print(s)
+# f.flush()
+# f.close()
+
+
+# f = open("字母", mode="r+", encoding="utf-8")
+# f.seek(3) #移动到距开头n字节的位置
+# s = f.read()
+# print(s)
+
+
+# import os
+# with open('字母', mode='r', encoding='utf-8') as f1,\
+# open('字母_new', mode='w', encoding='UTF-8') as f2:
+#     s = f1.read()
+#     ss = s.replace('一', '你好')
+#     f2.write(ss)
+# os.remove('字母')
+# os.rename('字母_new', '字母')
+
+
