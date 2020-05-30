@@ -1,0 +1,90 @@
+#作业
+# f = open('悯农', mode='r', encoding='utf-8')
+# s = f.read()
+# print(s)
+# f.close()
+
+
+# f = open('悯农', mode='a', encoding='utf-8')
+# f.write('粒粒皆辛苦')
+# f.flush()
+# f.close()
+
+
+# f = open('悯农', mode='r+', encoding='utf-8')
+# s = f.read()
+# f.write('粒粒皆辛苦')
+# f.flush()
+# f.close()
+# print(s)
+
+
+# f = open('悯农', mode='w+', encoding='utf-8')
+# s = f.read()
+# f.write('静夜思')
+# f.flush()
+# f.close()
+
+# import os
+# with open('悯农', mode='r', encoding='utf-8')as f1,\
+#     open('悯农_new', mode='w', encoding='utf-8')as f2:
+#     s = f1.read()
+#     ss = s.replace('悯农', '悯农 李绅')
+#     f2.write(ss)
+# os.remove('悯农')
+# os.rename('悯农_new', '悯农')
+
+# f = open('悯农', mode='a+', encoding='utf-8')
+# f.write('粒粒皆辛苦')
+# f.flush()
+# f.seek(0)
+# s = f.read()
+# print(s)
+
+
+# f = open('材料', mode='r', encoding='utf-8')
+# line = f.readline()
+# lst = line.split()
+# result = []
+# for lin in f:
+#     ll = lin.split()
+#     dic = {}
+#     for i in range(len(ll)):
+#         dic[lst[i]] = ll[i]
+#         result.append(dic)
+# print(result)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#code
+# def f():
+#     print('f')
+#     return 'f works'
+# ret = f()
+# print(ret)
+
+
+# def f(x):
+#     print('%d' % x)
+# f(1)
+
+
+def f(name, time, sex = '男'):
+    print(name + '是' + time + sex + '人')
+f(name = '李白', time = '唐朝')
+f(name = '李清照', time = '宋朝', sex = '女')
