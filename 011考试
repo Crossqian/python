@@ -1,0 +1,144 @@
+# 1.将字符串k1:1|k2:2|k3:3|k4:4处理成字典{'k1', 1|'k2', 2|'k3', 5|'k4', 4}
+# str = 'k1:1|k2:2|k3:3|k4:4'
+# dic = {}
+# lst = str.split('|')
+# for e in lst:
+#     k, v = e.split(':')
+#     dic[k] = v
+# print(dic)
+
+
+# 2.实现一个整数加法计算器
+# 如：content = input('请输入内容:')  # 如用户输入：5+8+7....(最少输入两个数相加)，将最后的计算结果添加到此字典中(替换None)
+# content = input('请输入内容:')
+# dic = {}
+# sum = 0
+# lst = content.split('+')
+# for e in lst:
+#     sum += int(e)
+# dic['最终计算结果'] = sum
+# print(dic)
+
+
+# 3.写函数实现以下功能：
+# 给函数传入一个列表（此列表中的元素为str类型），将列表中的每个元素按顺序依次加上它们的索引形成新的元素并添加到一个新列表，返回新列表。
+# 例如传入['a', 'b']，输出['a0', 'b1']。
+# def f(lst):
+#     lst_new = []
+#     i = 0
+#     for e in lst:
+#         lst_new.append(e + str(i))
+#         i += 1
+#     print(lst_new)
+#
+# lst1 = ['a', 'b']
+# f(lst1)
+
+
+# 4.写函数实现以下功能：
+# 函数可接受多个字符串类型的参数，此函数的功能时将所有的参数以'_'的形式隔开，然后追加到一个文件中。
+# def main(file_path, *args):
+#     str = '_'.join(args)
+#     f = open(file_path, mode='a', encoding="utf-8")
+#     f.write(s)
+#     f.flush()
+#     f.close()
+
+
+# 5.有文件t1.txt里面的内容为：
+#   1,alex,22,13651054608,IT
+# 	2,wusir,23,13304320533,Tearche
+# 	3,taibai,18,1333235322,IT
+# 利用文件操作，将其构造成如下数据类型。
+# [{'id':'1','name':'alex','age':'22','phone':'13651054608',''job':'IT'},......]
+# result = []
+# with open('t1', encoding="utf-8") as f:
+#     for line in f:
+#         lst = line.split(',')
+#         dic = {}
+#         dic["id"] = lst[0]
+#         dic['name'] = lst[1]
+#         dic['age'] = lst[2]
+#         dic['phone'] = lst[3]
+#         dic['job'] = lst[4]
+#         result.append(dic)
+# print(result)
+
+
+# 6.有如下值li = [11,22,33,44,55,77,88,99,90]，将所有大于66的值保存至字典的第一个key中，
+# 将小于66的值保存至第二个key的值中，在下面代码的基础上写。
+# li = [11,22,33,44,55,77,88,99,90]
+# result = {}
+# for row in li:
+# li = [11, 22, 33, 44, 55, 77, 88, 99, 90]
+# result = {}
+# for row in li:
+#     if row > 66:
+#         result.setdefault('k1', []).append(row)
+#     elif row < 66:
+#         result.setdefault('k2', []).append(row)
+# print(result)
+
+
+# li = [11, 22, 33, 44, 55, 77, 88, 99, 90]
+# result = {}
+# for row in li:
+#     if row > 66:
+#         l = result.get("k1")    # 上来就拿k1
+#         if l == None:   # k1不存在. 没有这个列表
+#             result["k1"] = [row]    # 创建一个列表扔进去
+#         else:   # k1如果存在
+#             result['k1'].append(row)    # 追加内容
+#     else:
+#         l = result.get("k2")  # 上来就拿k1
+#         if l == None:  # k1不存在. 没有这个列表
+#             result["k2"] = [row]  # 创建一个列表扔进去
+#         else:  # k1如果存在
+#             result['k2'].append(row)  # 追加内容
+# print(result)
+
+# 7.写函数完成以下功能：
+# 输入
+user_list = [
+    {'name': 'a', 'hobby': 'eat'},
+    {'name': 'a', 'hobby': 'drink'},
+    {'name': 'a', 'hobby': 'run'},
+    {'name': 'b', 'hobby': 'dance'},
+    {'name': 'b', 'hobby': 'swim'},
+]
+# 输出
+# [
+#     {'name': 'a', 'hobby_list': ['eat', 'drink', 'run']},
+#     {'name': 'b', 'hobby_list': ['dance', 'swim']},
+# ]
+# 输入列表元组格式固定但个数动态。
+result = []
+def main(list):
+
+    name_temp = ''
+    count = 0
+
+    for e in list:
+        if e['name'] != name_temp:
+            name_temp = e['name']
+            count += 1
+            result.append({})
+    # print(result)
+
+
+    name_temp = ''
+    i = -1
+    for e in list:
+        if e['name'] != name_temp:
+            i += 1
+            name_temp = e['name']
+            result[i]['name'] = (e['name'])
+            result[i].setdefault('hobby_list', []).append(e['hobby'])
+        else:
+            result[i].setdefault('hobby_list', []).append(e['hobby'])
+    print(result)
+
+main(user_list)
+
+
+
