@@ -1,0 +1,213 @@
+#作业
+# 1.写函数，检查获取传入列表或元组对象的所有奇数位索引对应的元素，并将其作为新列表返回给调用者。
+# def f(lst):
+#     ll = []
+#     for i in range(len(lst)):
+#         if i % 2 == 1:
+#             ll.append(lst[i])
+#     return ll
+# a = [1, 2, 3, 4, 5, 6, 7]
+# ret = f(a)
+# print(ret)
+
+
+# 2.写函数，判断用户传入的对象（字符串、列表、元组）长度是否大于5。
+# def f(a):
+#     if len(a) > 5:
+#         return True
+#     else:
+#         return False
+#
+#
+# def f(a):
+#     return len(a) > 5
+
+# 3.判断列表是否大于2，若大于2，返回前两个。
+# def func(lst):
+#     if len(lst) > 2:
+#         return lst[0], lst[1]
+
+
+# 4.写函数，计算传入函数的字符串中, 数字、字母、空格以及其他内容的个数，并返回结果。
+# def f(s=''):
+#     num = 0
+#     cha = 0
+#     spa = 0
+#     else = 0
+#     for c in s:
+#         if c.isdigit():
+#             num += 1
+#         elif c.isalpha():
+#             cha +=1
+#         elif c == ' ':
+#             spa += 1
+#         else:
+#             else += 1
+#     return num, cha, spa, else
+
+# 5.写函数，接收两个数字参数，返回比较大的那个数字。
+# def f(a, b):
+#     if a > b:
+#         return a
+#     else:
+#         return b
+
+# def f(a, b):
+#     c = a if a > b else b
+#     return c
+
+
+
+# 6.写函数，检查传入字典的每一个value的长度,如果大于2，那么仅保留前两个长度的内容，并将新内容返回给调用者。
+# def f(dic):
+#     new_dic = {}
+#     for k, v in dic.items():
+#         if len(v) > 2:
+#             new_dic[k] = v[0:2]
+#         else:
+#             new_dic[k] = v
+#     return new_dic
+#
+# dic = {"k1": "123456", "k2": [27,32,5,7]}
+# print(f(dic))
+
+# 7.函数接收一个列表，返回一个字典，字典的关键字为列表索引，值为对应的元素。
+# def f(lst):
+#     dic = {}
+#     for i in range(len(lst)):
+#         dic[i] = lst[i]
+#     return dic
+
+
+# 8.接收学生的姓名，性别，年龄，学历，追加到文件student.msg
+# def f(name, age, edu, sex = '男'):
+#     f = open('student.msg', mode='a', encoding='utf-8')
+#     f.write(name + '_' + str(age) + '_' + edu + '_' + sex + '\n')
+#     f.flush()
+#     f.close()
+#
+#
+# while 1:
+#     content = input('输入')
+#     if content.lower() == '':
+#         break
+#     name = input('名字')
+#     age = input('年龄')q
+#     edu = input('学历')
+#     sex = input('性别')
+#     if sex == '男':
+#         f(name, age, edu)
+#     else:
+#         f(name, age, edu, sex)
+
+# 9.写函数，用户传入修改的文件名与要修改的内容，执行函数，完成整个文件的批量修改。
+# import os
+# def f(filename, old, new):
+#     with open(filename, mode="r", encoding="utf-8") as f1,\
+#         open(filename+"_new", mode="w", encoding="utf-8") as f2:
+#
+#         for line in f1:
+#             s = line.replace(old, new)
+#             f2.write(s)
+#
+#     os.remove(filename)
+#     os.rename(filename+"_new", filename)
+
+
+
+
+
+#code
+# def eat(*food):
+#     print('I want to eat', food)
+#
+# eat('noddles', 'rice')
+
+
+# def f(*n):
+#     sum = 0
+#     for e in n:
+#         sum += e
+#     return sum
+#
+# print(f(5, 6, 7))
+
+
+# def eat(**food):
+#     print(food)
+#
+# eat(f1 = 'noddles', f2 = 'rice')
+
+
+# a = 10
+# def f():
+#     a = 20
+#     print(a)
+#     print(locals())
+#     print(globals())
+# f()
+
+
+# def f1():
+#     print('1')
+#
+# def f2():
+#     f1()
+#     print('2')
+#     f2()
+#
+# f2()
+
+
+# def func1():
+#     print("赵")
+#     def func2():
+#         print("钱")
+#         def func3():
+#             print("孙")
+#         print("李")
+#         func3()
+#     print("周")
+#     func2()
+# func1()
+
+
+# a = 10
+# def f():
+#     global a
+#     a = a + 10
+#     print(a)
+# f()
+# print(a)
+
+
+
+# def func1():
+#     a = 10
+#     def func2():
+#         nonlocal a
+#         print(a)
+#     func2()
+#     print(a)
+# func1()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
