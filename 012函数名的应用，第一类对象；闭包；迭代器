@@ -1,0 +1,85 @@
+# def f():
+#     print('hello')
+# print(f)
+# a = f
+# print(a)
+# f()
+# a()
+
+
+# def f1():
+#     print('a')
+# def f2():
+#     print('b')
+# def f3():
+#     print('c')
+# def f4():
+#     print('d')
+# lst = [f1(), f2(), f3(), f4()]
+# print(lst)
+
+
+# def f(fn):
+#     fn()
+# def gn():
+#     print('a')
+# f(gn)
+
+
+# def f():
+#     def inner():
+#         print('a')
+#     return inner
+# ret = f()
+# ret()
+
+
+# def f():
+#     name = 'a'
+#     def inner():
+#         print(name)
+#     return inner
+#
+# ret = f()
+# ret()
+
+
+# list = [1,]
+# print(dir(list))
+
+
+# lst = [1, 2, 3, 4, 5]
+# it = lst.__iter__()
+# print(it.__next__())
+# print(it.__next__())
+# print(it.__next__())
+# print(it.__next__())
+# print(it.__next__())
+# print(it.__next__())
+
+
+# lst = [1, 2, 3, 4, 5]
+# it = lst.__iter__()
+# while True:
+#     try:
+#         e = it.__next__()
+#         print(e)
+#     except StopIteration:
+#         break
+
+
+# lst = [1, 2, 3, 4, 5]
+# print('__iter__' in dir(lst))
+# print('__next__' in dir(lst))
+
+
+# lst = [1, 2, 3, 4, 5]
+# from collections import Iterable    # 可迭代的
+# from collections import Iterator    # 迭代器
+# print(isinstance(lst, Iterable))
+# print(isinstance(lst, Iterator))
+
+
+
+
+
