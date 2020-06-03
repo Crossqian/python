@@ -196,8 +196,35 @@
 
 
 
+# 010作业
+# 1.求传入参数的和
+# def f(*args):
+#     sum = 0
+#     for e in args:
+#         sum += e
+#     return sum
+# print(f(1,2))
+
+# def f(*args):
+#     return sum(args)
+# print(f(1,2))
 
 
+# 2.接收n个参数，以字典返回最大值与最小值
+# def f(*args):
+#     dic = {}
+#     max = args[0]
+#     min = args[0]
+#     for e in args:
+#         if e > max:
+#             max = e
+#         if e < min:
+#             min = e
+#     dic['max'] = max
+#     dic['min'] = min
+#     print(dic)
+#
+# f(1, 2, 3, 4)
 
 
 
