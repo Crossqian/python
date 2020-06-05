@@ -114,3 +114,52 @@
 # s = {i for i in lst}
 # print(s)
 
+
+
+
+
+
+
+
+# 作业
+#　1.过滤掉长度小于3的字符串列表,并将剩下的转换成大写字母
+# lst = ['aa', 'bbbbb', 'cccccccc']
+# new_lst = [e.upper() for e in lst if len(e) >= 3]
+# print(new_lst)
+
+
+# 2.求(x, y),其中x是0-5之间的偶数,y是0-5之间的奇数组成的元组列表
+# lst = [(x, y) for x in range(6) if x % 2 == 0 for y in range(6) if y % 2 != 0]
+# print(lst)
+
+
+# 3.求M = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]中3, 6 ,9组成的列表
+# M = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+# i = 0
+# while i < 3:
+#     lst1 = M[i]
+#     lst = [e for e in lst1 if e % 3 == 0]
+#     print(lst)
+#     i += 1
+
+
+# M = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+# print(list(i[2] for i in M))
+
+
+# 4.将
+# x = {
+#     'name':'alex',
+#     'Values':[{'timestamp':1517991992.94,'values':100,},
+#               {'timestamp': 1517992000.94,'values': 200,},
+#               {'timestamp': 1517992014.94,'values': 300,},]
+#     }
+#     通过列表推导式转换为[[1517991992.94, 100], [1517992000.94, 200], [1517992014.94, 300]]
+x = {
+    'name':'alex',
+    'Values':[{'timestamp':1517991992.94,'values':100,},
+              {'timestamp': 1517992000.94,'values': 200,},
+              {'timestamp': 1517992014.94,'values': 300,},]
+    }
+print([[el['timestamp'], el['values']] for el in x['Values']])
+
