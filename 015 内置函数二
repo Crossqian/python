@@ -1,0 +1,121 @@
+# def f(n):
+#     return n * n
+# print(f(3))
+#
+# a = lambda x: x * x
+# print(a)
+# print(a(6))
+
+
+# lst = [2, 5, 7, 1, 8]
+# lst.sort()
+# lst1 = sorted(lst)
+# print(lst)
+# print(lst1)
+
+
+# 对给定列表根据字符串长度进行排序
+# lst = ['aa', '432', 'rweqrwe', 'a']
+# def f(s):
+#     return len(s)
+# lst1 = sorted(lst, key=f)
+# print(lst1)
+
+
+# lst = [1, 2, 3, 4, 5, 6, 7]
+# lst1 = filter(lambda x: x%2==0, lst) # 筛选所有的偶数
+# print(lst1)
+# print(list(lst1))
+
+
+# lst = [1, 2, 3, 4, 5]
+# def f(e):
+#     return e * e
+# mp = map(f, lst)
+# print(mp)
+# print(list(mp))
+
+
+# lst1 = [1, 2, 3, 4, 5]
+# lst2 = [2, 4, 6, 8, 10]
+# print(list(map(lambda x, y: x+y, lst1, lst2)))
+
+
+# def f(count):
+#     print('Hello' + str(count))
+#     f(count + 1)
+# f(1)
+
+
+#递归遍历目录下所有文件
+# import os
+# filePath = ''
+# def read(filePath, n):
+#     it = os.listdir(filePath) # 获取到当前⽂件夹中的所有⽂件
+#     for el in it: # 遍历⽂件夹中的⽂件, 这⾥获取的只是本层⽂件名
+#         fp = os.path.join(filePath, el) # 加⼊⽂件夹 获取到⽂件夹+⽂件
+#         if os.path.isdir(fp): # 如果该路径下的⽂件是⽂件夹
+#             print("\t"*n, el)
+#             read(fp, n+1) # 继续进⾏相同的操作
+#         else:
+#             print("\t"*n, el) # 递归出⼝,最终在这⾥隐含着return
+# read(filePath, 0)
+
+
+lst = [22, 33, 44, 55, 66, 77, 88, 99, 101, 238, 345, 456, 567, 678, 789]
+# n = 789
+# left = 0
+# right = len(lst) - 1
+# count = 1
+#
+# while left <= right:
+#     middle = (left + right)//2  #地板除，3//2=1
+#     if n < lst[middle]:
+#         right = middle - 1
+#     elif n > lst[middle]:
+#         left = middle + 1
+#     else:
+#         print(count)
+#         print(middle)
+#         break
+#     count += 1
+# else:
+#     print("不存在")
+
+
+
+
+
+
+# def binary_search(n, left, right):
+#     if left <= right:
+#         middle = (left + right) // 2
+#         if n < lst[middle]:
+#             right = middle - 1
+#         elif n > lst[middle]:
+#             left = middle + 1
+#         else:
+#             return middle
+#         return binary_search(n, left, right) # 这个return必须要加. 否则接收到的永远是None.
+#     else:
+#         return -1
+#
+# print(binary_search(789, 0, len(lst)-1))
+
+
+# 另类⼆分法, 很难计算位置.
+def binary_search(lst, target):
+    left = 0
+    right = len(lst) - 1
+    if left > right:
+        print("不在里面")
+    else:
+        middle = (left + right) // 2
+        if target < lst[middle]:
+            return binary_search(lst[:middle], target)
+        elif target > lst[middle]:
+            return binary_search(lst[middle+1:], target)
+        else:
+            print("在里面")
+binary_search(lst, 789)
+binary_search(lst, 1)
