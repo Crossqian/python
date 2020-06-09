@@ -1,0 +1,188 @@
+# class Animal:
+#     def __init__(self, name, sex, age):
+#         self.name = name
+#         self.sex = sex
+#         self.age = age
+#
+#
+# class Person:
+#     def __init__(self, name, sex, age):
+#         self.name = name
+#         self.sex = sex
+#         self.age = age
+#
+#
+# class Cat:
+#     def __init__(self, name, sex, age):
+#         self.name = name
+#         self.sex = sex
+#         self.age = age
+#
+#
+# class Dog:
+#     def __init__(self, name, sex, age):
+#         self.name = name
+#         self.sex = sex
+#         self.age = age
+#
+#
+# p1 = Person('m', 'man', 25)
+
+
+# class Animal:
+#     def __init__(self, name, sex, age):
+#         self.name = name
+#         self.sex = sex
+#         self.age = age
+#
+#
+# class Person(Animal):
+#     pass
+#
+#
+# p1 = Person('m', 'man', 25)
+# print(p1.__dict__)
+
+
+# class Animal:
+#     def __init__(self, name, sex, age):
+#         self.name = name
+#         self.sex = sex
+#         self.age = age
+#
+#     def eat(self, food):
+#         print('%s吃%s' % (self.name, food))
+#
+#
+# class dog(Animal):
+#
+#     def bark(self):
+#         print('汪汪汪')
+#
+#     def eat(self):
+#         print('%s吃狗粮' % self.name)
+#
+#
+# dog = dog('旺财', '雄', 2)
+# dog.eat()
+
+
+# class Animal:
+#     def __init__(self, name, sex, age):
+#         self.name = name
+#         self.sex = sex
+#         self.age = age
+
+
+# class bird(Animal):
+#     def __init__(self, name, sex, age, wing):
+#         Animal.__init__(self, name, sex, age)   # 执行父类的__init__()
+#         self.wing = wing
+#
+# b1 = bird('鹦鹉', '公', 20, '绿翅膀')
+
+# class bird(Animal):
+#     def __init__(self, name, sex, age, wing):
+#         super().__init__(name, sex, age)
+#         self.wing = wing
+#
+# b1 = bird('鹦鹉', '公', 20, '绿翅膀')
+
+
+# class Animal:
+#     def __init__(self, name, sex, age):
+#         self.name = name
+#         self.sex = sex
+#         self.age = age
+#
+#     def eat(self, food):
+#         print('%s吃%s' % (self.name, food))
+#
+#
+# class bird(Animal):
+#     def __init__(self, name, sex, age, wing):
+#         Animal.__init__(self, name, sex, age)  # 执行父类的__init__()
+#         self.wing = wing
+#
+#     def eat(self, food):
+#         super().eat(food)
+#         print('%s吃东西2' % self.name)
+#
+#
+# b1 = bird('鹦鹉', '公', 20, '绿翅膀')
+# b1.eat('虫子')
+
+
+# class A:
+#     def func(self):
+#          print('IN A')
+# class B(A):
+#     pass
+# class C(B):
+#     pass
+# c1 = C()
+# c1.func()
+
+
+
+# class A:
+#     def func(self):
+#         print('IN A')
+# class B(A):
+#     pass
+#     # def func(self):
+#     #     print('IN B')
+# class C(A):
+#     def func(self):
+#         print('IN C')
+# class D(B):
+#     pass
+#     # def func(self):
+#     #     print('IN D')
+# class E(C):
+#     def func(self):
+#         print('IN E')
+# class F(D,E):
+#     pass
+#     # def func(self):
+#     #     print('IN F')
+#
+# f1 = F()
+# f1.func()
+
+
+# class A:
+#     def func(self):
+#         print('IN A')
+#
+# class B(A):
+#     pass
+#     # def func(self):
+#     #     print('IN B')
+#
+# class C:
+#     pass
+#     # def func(self):
+#     #     print('IN C')
+#
+# class D(B):
+#     pass
+#     # def func(self):
+#     #     print('IN D')
+#
+# class E(C):
+#     def func(self):
+#         print('IN E')
+#
+# class F(D,E):
+#     pass
+#     # def func(self):
+#     #     print('IN F')
+#
+# f1 = F()
+# f1.func()
+#
+#
+# print(F.mro())  # 查询类的继承顺序
+
+
