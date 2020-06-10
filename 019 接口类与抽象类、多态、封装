@@ -1,0 +1,119 @@
+# v1
+# class Alipay:
+#     def __init__(self, money):
+#         self.money = money
+#     def pay(self):
+#         print('使用Alipay支付了%s元' % self.money)
+#
+#
+# class JDpay:
+#     def __init__(self, money):
+#         self.money = money
+#     def pay(self):
+#         print('使用JDpay支付了%s元' % self.money)
+#
+#
+# a1 = Alipay(200)
+# a1.pay()
+# j1 = JDpay(100)
+# j1.pay()
+
+
+# v2：将支付方式改成一样
+# class Alipay:
+#     def __init__(self, money):
+#         self.money = money
+#
+#     def pay(self):
+#         print('使用Alipay支付了%s元' % self.money)
+#
+#
+# class JDpay:
+#     def __init__(self, money):
+#         self.money = money
+#
+#     def pay(self):
+#         print('使用JDpay支付了%s元' % self.money)
+#
+#
+# def pay(obj):
+#     obj.pay()
+#
+#
+# pay(Alipay(200))
+# j1 = JDpay(100)
+# pay(j1) #统一化接口设计
+
+
+
+# v3：制定规则，抽象类与接口类
+# from abc import ABCMeta, abstractmethod
+# class Payment(metaclass=ABCMeta):  #抽象类(接口类)
+#     @abstractmethod
+#     def pay(self):
+#         pass
+# class Wechatpay(Payment):
+#     def __init__(self, money):
+#         self.money = money
+#     def wechatpay(self):
+#         print('使用Wechatpay支付了%s元' % self.money)
+# def pay(obj):
+#     obj.pay()
+# w1 = Wechatpay()
+
+
+# class B:
+#     __money = 100000
+#
+# class A(B):
+#     name = 'a'
+#     __age = 24
+#
+#     def func(self):
+#         print(self.__age)
+#         print(A.__age)    # 对于私有静态字段,类的内部可以访问.
+#         print('func....')
+#     def func1(self):
+#         print(self.__money)
+#         print(A.__money)
+# a1 = A()
+# a1.func()
+# a1.func1()
+
+# class A:
+#     name = 'a'
+#     __age = 24
+#
+# a1 = A()
+# print(a1._A__age)
+# print(A._A__age)
+
+
+# class A:
+#     name = 'a'
+#     def __f(self):
+#         print('private function')
+#     def f(self):
+#         self.__f()
+# a1 = A()
+# A.f()
+
+# class A:
+#     def __init__(self, age):
+#         self.__age = age
+#     def f(self):
+#         print(self.__age)
+# a1 = A(20)
+# a1.f()
+
+
+
+
+
+
+
+
+
+
+
+
