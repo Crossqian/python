@@ -1,0 +1,100 @@
+# class Person:
+#     def __init__(self, name, height, weight):
+#         self.name = name
+#         self.height = height
+#         self.weight = weight
+#
+#     @property
+#     def bmi(self):
+#         return '%s的bmi值为%s' % (self.name, self.weight / (self.height ** 2))
+#
+#
+# p1 = Person('alex', 1.7, 60)
+# print(p1.bmi)
+
+
+# class Person:
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.__age = age
+#
+#     @property
+#     def age(self):
+#         return self.__age
+#
+#     @age.setter
+#     def age(self, a1):
+#         print('change')
+#         print(a1)
+#
+#
+# p1 = Person('a', 20)
+# p1.age = 18
+
+
+# class Person:
+#     def __init__(self, name, age):
+#         self.name = name
+#         if type(age) is int:
+#             self.__age = age
+#         else:
+#             print('wrong')
+#     @property
+#     def age(self):
+#         return self.__age
+#     @age.setter
+#     def age(self, a1):
+#         if type(a1) is int:
+#             self.__age = a1
+#             print('change')
+#         else:
+#             print('wrong')
+#     @age.deleter
+#     def age(self):
+#         del self.__age
+#         print('delete')
+# p1 = Person('a', 20)
+# p1.age = 18
+# print(p1.age)
+# del p1.age
+
+
+# class A:
+#     def func(self):
+#         print(self)
+#
+#     @classmethod
+#     def func1(cls):
+#         print(cls)
+#
+# a1 = A()
+# a1.func()
+# a1.func1()
+# A.func1()
+
+
+# class A:
+#     name = 'a'
+#     count = 1
+#
+#     @classmethod
+#     def func1(cls):
+#         print(cls)
+#
+#
+# class B(A):
+#     pass
+#
+#
+# B.func1()
+
+
+# class A:
+#     @staticmethod
+#     def func():
+#         print(7)
+#
+# A.func()
+
+
+
