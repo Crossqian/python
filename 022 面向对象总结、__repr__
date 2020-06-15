@@ -1,0 +1,142 @@
+# class A:
+#     def __init__(self):
+#         pass
+# a = A()
+# print(type(a))
+# print(type(A))
+
+# from abc import ABCMeta
+# print(type(ABCMeta))
+# class A(metaclass=ABCMeta):
+#     pass
+# print(type(A))
+# class A(metaclass=type):
+#     pass
+# print(type(A))
+# class A():
+#     pass
+# print(type(A))
+
+
+# class A:
+#     name = 'a'
+#     print(A.name)
+
+
+# class A:
+#     def func(self):
+#         pass
+# a = A()
+# print(a.func)
+# print(A.func)
+
+
+# class Animal:
+#     def eat(self):pass
+# class Tiger(Animal):
+#     def eat(self):pass
+# class Dog(Animal):
+#     def eat(self):pass
+#
+#
+# def func(obj):
+#     obj.eat()
+
+
+# class A:
+#     @property
+#     def name(self):
+#         return 'a'
+#     @name.deleter
+#     def name(self):
+#         print('b')
+#
+# del A.name
+# a = A()
+# print(a.__dict__)
+
+
+# class Circle:
+#     def __init__(self, r):
+#         self.r = r
+#         self.area = 3.14 * r ** 2
+# c = Circle(1)
+# print(c.area)
+# c.r = 2
+# print(c.r)
+# print(c.area)
+
+
+# class Circle:
+#     def __init__(self, r):
+#         self.r = r
+#     @property
+#     def area(self):
+#         return 3.14 * self.r ** 2
+# c = Circle(1)
+# print(c.area)
+# c.r = 2
+# print(c.r)
+# print(c.area)
+
+
+# class Goods:
+#     __discount = 0.8
+#     def __init__(self, price):
+#         self.__price = price
+#     @property
+#     def price(self):
+#         return self.__price * Goods.__discount
+#     @classmethod
+#     def change_discount(cls, num):
+#         cls.__discount = num
+# apple = Goods(10)
+# banana = Goods(15)
+# print(apple.price, banana.price)
+# Goods.change_discount(1)
+# print(apple.price, banana.price)
+
+
+# class Person:
+#     @staticmethod
+#     def login(self): pass
+# class Student(Person): pass
+# class Manager(Person): pass
+# class Course: pass
+# class Classes: pass
+
+
+
+
+# x = 5
+# y = 6
+# print(x.__add__(y))
+# print(x+y)   # 语法糖
+
+# class MyType:
+#     def __init__(self, s):
+#         self.s = s
+#     def __add__(self, other):   # __sub__ __mul__ __div__
+#         return self.s.count('*') + other.s.count('*')
+# obj1 = MyType('asjkfhk***17264****')
+# obj2 = MyType('asjkfhk***17***')
+# print(obj1 + obj2)
+# print(obj1.__add__(obj2))
+
+
+# a = '123'
+# print(a)
+# print(repr(a))
+
+
+class A:
+    def __init__(self, name):
+        self.name = name
+    def __str__(self):
+        return '**%s**' % self.name
+    # def __repr__(self):
+    #     return self.name
+a = A('123')
+print(a)
+print(str(a), repr(a))
+print('%s|%r' % (a, a))
