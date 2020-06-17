@@ -1,0 +1,113 @@
+# class A:
+#     pass
+# a = A()
+# del a
+# print(a)
+
+# class A:
+#     def __del__(self):
+#         print('work')
+# a = A()
+# # del a
+# print(a)
+
+
+# class File():
+#     def __init__(self, file_path):
+#         self.f = open(file_path)
+#     def read(self):
+#         self.f.read(1024)
+#     def __del__(self):   # 是去归还/释放一些在创建对象的时候借用的一些资源
+#         # del 对象的时候   程序员触发
+#         # python解释器的垃圾回收机制 回收这个对象所占得内存的时候  python自动触发的
+#         self.f.close()
+# f = File('文件名')
+# f.read()
+
+
+# class B:
+#     def __getitem__(self, item):
+#         print('work', item)
+#         return '123'
+#     def __setitem__(self, key, value):
+#         print(key, value)
+# b = B()
+# print(b['a'])
+# b['k'] = 'value'
+# print(b['k'])
+
+
+# class B:
+#     def __getitem__(self, item):
+#         return getattr(self, item)
+#     def __setitem__(self, key, value):
+#         setattr(self, key, value)
+#     def __delitem__(self, key):
+#         print(key)
+#         #delattr(self, key)
+# b = B()
+# b['k1'] = 'v1'
+# print(b['k1'])
+# b.k2 = 'v2'
+# print(b.k2)
+# del b['k1']
+# print(b['k1'])
+
+
+# class B:
+#     def __init__(self,lst):
+#         self.lst = lst
+#     def __getitem__(self, item):
+#         return self.lst[item]
+#     def __setitem__(self, key, value):
+#         self.lst[key] = value
+#     def __delitem__(self, key):
+#         self.lst.pop(key)
+# b = B(['111','222','ccc','ddd'])
+# print(b.lst[0])
+# print(b[0])
+# b[3] = '444'
+# print(b.lst)
+# del b[2]
+# print(b.lst)
+
+
+# class A:
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
+#     def __eq__(self, other):
+#         if self.name == other.name and self.age == other.age:
+#             return True
+# a1= A('a', 1)
+# a2 = A('a', 1)
+# print(a1, a2)
+# print(a1 == a2)
+
+
+# class Employee:
+#     def __init__(self, name, age, sex, department):
+#         self.name = name
+#         self.age = age
+#         self.sex = sex
+#         self.department = department
+#     def __hash__(self):
+#         return hash('%s%s' % (self.name, self.sex))
+#     def __eq__(self, other):
+#         if self.name == other.name and self.sex == other.sex:
+#             return True
+# employ_lst = []
+# for i in range(200):
+#     employ_lst.append(Employee('p1', i, 'male', 'pa'))
+# for i in range(200):
+#     employ_lst.append(Employee('p2', i, 'male', 'pb'))
+# for i in range(200):
+#     employ_lst.append(Employee('p3', i, 'male', 'pc'))
+# employ_set = set(employ_lst)
+# for person in employ_set:
+#     print(person.__dict__)
+
+
+
+import my_module
+my_module.login()
